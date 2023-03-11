@@ -70,7 +70,6 @@ section h2
 }
 
 .image {
-  background-image: url(img/help.png);
   width: 20em;
   height: 20em;
   margin: 0 auto;
@@ -78,6 +77,22 @@ section h2
   opacity: 0;
   transform: scale(0.5);
   transition: 1s;
+}
+
+.image1 {
+  background-image: url(img/1.png);
+}
+.image2 {
+  background-image: url(img/2.png);
+}
+.image3 {
+  background-image: url(img/3.png);
+}
+.image4 {
+  background-image: url(img/4.png);
+}
+.image5 {
+  background-image: url(img/5.png);
 }
 
 .icon {

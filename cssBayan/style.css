@@ -48,7 +48,6 @@ section
 	background-color: #444;
   overflow: hidden;
   transition: 1s;
-  cursor: pointer;
 }
 
 section h2
@@ -104,19 +103,17 @@ section h2
   transition: .5s;
 }
 
-.accordion:hover .icon {
+/* .accordion:hover .icon {
   opacity: 0.8;
   transition: .3s;
-}
+} */
 
-section:hover,
 section:target
 {
 	height: 26em;
 	background-color: #fff;
 }
 
-section:hover h2,
 section:target h2
 {
 	font-size: 1.5em;
@@ -124,7 +121,6 @@ section:target h2
 	color: #444;
 }
 
-section:hover .icon,
 section:target .icon {
   transform: rotate(45deg);
   background-image: url(img/close-b.svg);
@@ -133,11 +129,56 @@ section:target .icon {
   background-size: 1.4em 1.4em;
 }
 
-section:hover .image,
 section:target .image {
   opacity: 1;
   transform: scale(1);
   transition: 1s;
+}
+
+/** Hover Effects On -------------*/
+
+@media (hover: hover) {
+  section {
+  cursor: pointer;
+  }
+
+  .accordion:hover .icon {
+    opacity: 0.8;
+    transition: .3s;
+  }
+
+  section:hover {
+    height: 26em;
+    background-color: #fff;
+  }
+
+  section:hover h2 {
+    font-size: 1.5em;
+    line-height: 2.5em;
+    color: #444;
+  }
+
+  section:hover .icon {
+    transform: rotate(45deg);
+    background-image: url(img/close-b.svg);
+    width: 1.4em;
+    height: 1.4em;
+    background-size: 1.4em 1.4em;
+  }
+
+  section:hover .image {
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s;
+  }
+}
+
+/** Hover Effects Off-------------*/
+
+@media (hover: none) {
+  section {
+    cursor: default;
+  }
 }
 
 @media (max-width: 1440px) {
@@ -149,10 +190,6 @@ section:target .image {
 @media (max-width: 1000px) {
   body {
     font-size: 0.8em;
-  }
-
-  section {
-    cursor: default;
   }
 
   section h2 {

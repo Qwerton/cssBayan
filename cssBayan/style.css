@@ -140,3 +140,30 @@ section:target .image {
   transition: 1s;
 }
 
+@media (max-width: 1440px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 820px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  section {
+    cursor: default;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 340px) {
+  body {
+    font-size: 0.6em;
+  }
+}

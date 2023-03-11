@@ -103,11 +103,6 @@ section h2
   transition: .5s;
 }
 
-/* .accordion:hover .icon {
-  opacity: 0.8;
-  transition: .3s;
-} */
-
 section:target
 {
 	height: 26em;
@@ -137,7 +132,7 @@ section:target .image {
 
 /** Hover Effects On -------------*/
 
-@media (hover: hover) {
+@media (hover: hover) {  /** Включение hover эффектов и cursor: pointer только для Desktop */
   section {
   cursor: pointer;
   }
@@ -176,8 +171,12 @@ section:target .image {
 /** Hover Effects Off-------------*/
 
 @media (hover: none) {
-  section {
+  section {             /** Отключение cursor: pointer для мобильных и планшетов */
     cursor: default;
+  }
+  .accordion .icon {   /** Включение иконок для мобильных и планшетов (отображаются постоянно)*/
+    opacity: 0.8;
+    transition: .3s;
   }
 }
 

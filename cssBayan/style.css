@@ -146,13 +146,21 @@ section:target .image {
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1000px) {
   body {
     font-size: 0.8em;
   }
 
   section {
     cursor: default;
+  }
+
+  section h2 {
+    line-height: 4.2em;
+  }
+
+  section {
+    height: 4.2em;
   }
 }
 

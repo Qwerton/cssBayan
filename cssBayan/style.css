@@ -63,6 +63,12 @@ section h2
   transition: all 1s ease;
 }
 
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .image {
   background-image: url(img/help.png);
   width: 20em;
@@ -71,6 +77,20 @@ section h2
   background-size: 20em 20em;
   opacity: 1;
   transition: 1s ease;
+}
+
+.icon {
+  background-image: url(img/close-w.svg);
+  width: 1.2em;
+  height: 1.2em;
+  background-size: 1.2em 1.2em;
+  opacity: 0;
+  transition: .5s;
+}
+
+.accordion:hover .icon {
+  opacity: 0.8;
+  transition: .3s;
 }
 
 section:hover,
@@ -87,3 +107,13 @@ section:target h2
   line-height: 2.5em;
 	color: #444;
 }
+
+section:hover .icon,
+section:target .icon {
+  transform: rotate(45deg);
+  background-image: url(img/close-b.svg);
+  width: 1.4em;
+  height: 1.4em;
+  background-size: 1.4em 1.4em;
+}
+

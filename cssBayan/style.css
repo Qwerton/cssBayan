@@ -4,10 +4,14 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #dadada;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 50%;
-  border: 1px solid red;
 }
 
 .accordion
@@ -17,6 +21,7 @@
 	margin: 0 auto;
 	border-radius: 0.3em;
 	background-color: #888;
+  box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.50);
 }
 
 .accordion section
@@ -26,5 +31,6 @@
 	padding: 0 1em;
 	margin: 0 0 0.4em 0;
 	border-radius: 0.2em;
-	background-color: #444444;
+	background-color: #444;
+  overflow: hidden;
 }

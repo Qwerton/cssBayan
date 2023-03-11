@@ -171,6 +171,10 @@ section:target .image {
 /** Hover Effects Off-------------*/
 
 @media (hover: none) {
+  .wrapper {
+    width: 100%;    /** Ширина на весь экран для мобильных и планшетов */
+  }
+
   section {             /** Отключение cursor: pointer для мобильных и планшетов */
     cursor: default;
   }
@@ -180,15 +184,13 @@ section:target .image {
   }
 }
 
-@media (max-width: 1440px) {
-  .wrapper {
-    width: 100%;
-  }
-}
-
 @media (max-width: 1000px) {
   body {
     font-size: 0.8em;
+  }
+
+  .wrapper {
+    width: 100%;
   }
 
   section h2 {

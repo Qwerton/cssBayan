@@ -37,7 +37,7 @@ body {
   box-shadow: 0.1em 0.2em 0.2em rgba(0, 0, 0, 0.50);
 }
 
-section {
+.section {
 	width: 100%;
 	height: 2.5em;
 	padding: 0 1em;
@@ -48,7 +48,7 @@ section {
   transition: 1s;
 }
 
-section h2 {
+.section h2 {
 	font-size: 1em;
 	font-weight: bold;
 	width: 100%;
@@ -59,7 +59,7 @@ section h2 {
   transition: 1s;
 }
 
-section h2 a {
+.accordion a {
   display: block;
 	text-decoration: none;
   color: inherit;
@@ -106,18 +106,18 @@ section h2 a {
   transition: .5s;
 }
 
-section:target {
+.section:target {
 	height: 26em;
 	background-color: #fff;
 }
 
-section:target h2 {
+.section:target h2 {
 	font-size: 1.5em;
   line-height: 2.5em;
 	color: #444;
 }
 
-section:target .icon {
+.section:target .icon {
   transform: rotate(45deg);
   background-image: url(img/close-b.svg);
   width: 1.4em;
@@ -125,7 +125,7 @@ section:target .icon {
   background-size: 1.4em 1.4em;
 }
 
-section:target .image {
+.section:target .image {
   opacity: 1;
   transform: scale(1);
   transition: 1s;
@@ -134,32 +134,31 @@ section:target .image {
 /** Hover Effects On -------------*/
 
 @media (hover: hover) {  /** Включение hover эффектов и cursor: pointer только для Desktop */
-  section {
+  .section {
   cursor: pointer;
   }
 
-  section h2 a {
+  .accordion a {
   cursor: pointer;
   }
-
 
   .accordion:hover .icon {
     opacity: 0.8;
     transition: .3s;
   }
 
-  section:hover {
+  .section:hover {
     height: 26em;
     background-color: #fff;
   }
 
-  section:hover h2 {
+  .section:hover h2 {
     font-size: 1.5em;
     line-height: 2.5em;
     color: #444;
   }
 
-  section:hover .icon {
+  .section:hover .icon {
     transform: rotate(45deg);
     background-image: url(img/close-b.svg);
     width: 1.4em;
@@ -167,7 +166,7 @@ section:target .image {
     background-size: 1.4em 1.4em;
   }
 
-  section:hover .image {
+  .section:hover .image {
     opacity: 1;
     transform: scale(1);
     transition: 1s;
@@ -181,14 +180,13 @@ section:target .image {
     width: 100%;    /** Ширина на весь экран для мобильных и планшетов */
   }
 
-  section {             /** Отключение cursor: pointer для мобильных и планшетов */
+  .section {             /** Отключение cursor: pointer для мобильных и планшетов */
     cursor: default;
   }
 
-  section h2 a {
+  .accordion a {
     cursor: default;
   }
-
 
   .accordion .icon {   /** Включение иконок для мобильных и планшетов (отображаются постоянно)*/
     opacity: 0.8;
@@ -209,11 +207,11 @@ section:target .image {
     height: 7em;
   }
 
-  section h2 {
+  .section h2 {
     line-height: 4.2em;
   }
 
-  section {
+  .section {
     height: 4.2em;
   }
 }

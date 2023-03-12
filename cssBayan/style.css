@@ -28,8 +28,7 @@ body {
 	overflow: hidden;
 }
 
-.accordion
-{
+.accordion {
 	width: 100%;
 	padding: 0.4em 0.4em 0.01em 0.4em;
 	margin: 0 auto;
@@ -38,8 +37,7 @@ body {
   box-shadow: 0.1em 0.2em 0.2em rgba(0, 0, 0, 0.50);
 }
 
-section
-{
+section {
 	width: 100%;
 	height: 2.5em;
 	padding: 0 1em;
@@ -50,8 +48,7 @@ section
   transition: 1s;
 }
 
-section h2
-{
+section h2 {
 	font-size: 1em;
 	font-weight: bold;
 	width: 100%;
@@ -60,6 +57,12 @@ section h2
 	margin: 0;
 	color: #eee;
   transition: 1s;
+}
+
+section h2 a {
+  display: block;
+	text-decoration: none;
+  color: inherit;
 }
 
 .section-header {
@@ -103,14 +106,12 @@ section h2
   transition: .5s;
 }
 
-section:target
-{
+section:target {
 	height: 26em;
 	background-color: #fff;
 }
 
-section:target h2
-{
+section:target h2 {
 	font-size: 1.5em;
   line-height: 2.5em;
 	color: #444;
@@ -136,6 +137,11 @@ section:target .image {
   section {
   cursor: pointer;
   }
+
+  section h2 a {
+  cursor: pointer;
+  }
+
 
   .accordion:hover .icon {
     opacity: 0.8;
@@ -178,6 +184,12 @@ section:target .image {
   section {             /** Отключение cursor: pointer для мобильных и планшетов */
     cursor: default;
   }
+
+  section h2 a {
+    cursor: default;
+  }
+
+
   .accordion .icon {   /** Включение иконок для мобильных и планшетов (отображаются постоянно)*/
     opacity: 0.8;
     transition: .3s;

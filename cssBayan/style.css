@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #dadada;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.acc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+	width: 100%;
+	height: 4.2em;
+	padding: 0 1em;
+	margin: 0 0 0.4em 0;
+	border-radius: 0.2em;
+	color: #eee;
+	background-color: #2e2e2e;
+	overflow: hidden;
+}
+
+.accordion {
+	width: 100%;
+	padding: 0.4em 0.4em 0.01em 0.4em;
+	margin: 0 auto;
+	border-radius: 0.3em;
+	background-color: #888;
+  box-shadow: 0.1em 0.2em 0.2em rgba(0, 0, 0, 0.50);
+}
+
+.section {
+	width: 100%;
+	height: 2.5em;
+	padding: 0 1em;
+	margin: 0 0 0.4em 0;
+	border-radius: 0.2em;
+	background-color: #444;
+  overflow: hidden;
+  transition: 1s;
+}
+
+.section h2 {
+	font-size: 1em;
+	font-weight: bold;
+	width: 100%;
+	line-height: 2.5em;
+	padding: 0;
+	margin: 0;
+	color: #eee;
+  transition: 1s;
+}
+
+.accordion a {
+  display: block;
+	text-decoration: none;
+  color: inherit;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image {
+  width: 20em;
+  height: 20em;
+  margin: 0 auto;
+  background-size: 20em 20em;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: 1s;
+}
+
+.image1 {
+  background-image: url(img/1.png);
+}
+.image2 {
+  background-image: url(img/2.png);
+}
+.image3 {
+  background-image: url(img/3.png);
+}
+.image4 {
+  background-image: url(img/4.png);
+}
+.image5 {
+  background-image: url(img/5.png);
+}
+
+.icon {
+  background-image: url(img/close-w.svg);
+  width: 1.2em;
+  height: 1.2em;
+  background-size: 1.2em 1.2em;
+  opacity: 0;
+  transition: .5s;
+}
+
+.section:target {
+	height: 26em;
+	background-color: #fff;
+}
+
+.section:target h2 {
+	font-size: 1.5em;
+  line-height: 2.5em;
+	color: #444;
+}
+
+.section:target .icon {
+  transform: rotate(45deg);
+  background-image: url(img/close-b.svg);
+  width: 1.4em;
+  height: 1.4em;
+  background-size: 1.4em 1.4em;
+}
+
+.section:target .image {
+  opacity: 1;
+  transform: scale(1);
+  transition: 1s;
+}
+
+/** Hover Effects On -------------*/
+
+@media (hover: hover) {  /** Включение hover эффектов и cursor: pointer только для Desktop */
+  .section {
+  cursor: pointer;
+  }
+
+  .accordion a {
+  cursor: pointer;
+  }
+
+  .accordion:hover .icon {
+    opacity: 0.8;
+    transition: .3s;
+  }
+
+  .section:hover {
+    height: 26em;
+    background-color: #fff;
+  }
+
+  .section:hover h2 {
+    font-size: 1.5em;
+    line-height: 2.5em;
+    color: #444;
+  }
+
+  .section:hover .icon {
+    transform: rotate(45deg);
+    background-image: url(img/close-b.svg);
+    width: 1.4em;
+    height: 1.4em;
+    background-size: 1.4em 1.4em;
+  }
+
+  .section:hover .image {
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s;
+  }
+}
+
+/** Hover Effects Off-------------*/
+
+@media (hover: none) {
+  .wrapper {
+    width: 100%;    /** Ширина на весь экран для мобильных и планшетов */
+  }
+
+  .section {             /** Отключение cursor: pointer для мобильных и планшетов */
+    cursor: default;
+  }
+
+  .accordion a {
+    cursor: default;
+  }
+
+  .accordion .icon {   /** Включение иконок для мобильных и планшетов (отображаются постоянно)*/
+    opacity: 0.8;
+    transition: .3s;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 0.8em;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .acc-header {
+    height: 7em;
+  }
+
+  .section h2 {
+    line-height: 4.2em;
+  }
+
+  .section {
+    height: 4.2em;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 340px) {
+  body {
+    font-size: 0.6em;
+  }
+}
